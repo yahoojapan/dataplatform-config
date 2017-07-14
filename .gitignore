@@ -17,3 +17,6 @@ buildNumber.properties
 
 ## vim
 *.swp
+
+## backup
+*-e
