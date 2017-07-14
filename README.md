@@ -1,5 +1,5 @@
 # config
-コンポーネントで必要な設定に関する共通機能
+Provide common configuration interface for jp.co.yahoo.dataplatform libraries
 
 ## Requirements
 
