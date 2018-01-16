@@ -37,4 +37,18 @@ public final class FindClass{
     }
   }
 
+  public static Object getObject( final String targetClassName , final boolean initialize , final ClassLoader classLoader ) throws IOException{
+    try{
+      Class classObj = Class.forName( targetClassName , initialize , classLoader );
+      Object obj = classObj.newInstance();
+      return obj;
+    }catch( ClassNotFoundException e ){
+      throw new IOException( e );
+    }catch( InstantiationException e ){
+      throw new IOException( e );
+    }catch( IllegalAccessException e ){
+      throw new IOException( e );
+    }
+  }
+
 }
