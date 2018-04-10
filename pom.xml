@@ -56,6 +56,11 @@ limitations under the License.
       <name>Koji Ijima</name>
       <organization>Yahoo Japan Corporation</organization>
     </developer>
+    <developer>
+      <id>ohto</id>
+      <name>Yasu Ohto</name>
+      <organization>Yahoo Japan Corporation</organization>
+    </developer>
   </developers>
 
 
