@@ -15,18 +15,19 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package jp.co.yahoo.dataplatform.config;
 
-import java.util.Map;
 import java.io.IOException;
 import java.io.OutputStream;
+import java.util.Map;
 
-public interface IConfigWriter{
+public interface IConfigWriter {
 
-  void write( Map<String,String> settingContainer , String outputPath ) throws IOException;
+  void write(Map<String, String> settingContainer, String outputPath) throws IOException;
 
-  void write( Map<String,String> settingContainer , String outputPath , boolean overwrite ) throws IOException;
+  void write(Map<String, String> settingContainer, String outputPath, boolean overwrite)
+      throws IOException;
 
-  void write( Map<String,String> settingContainer , OutputStream out ) throws IOException;
-
+  void write(Map<String, String> settingContainer, OutputStream out) throws IOException;
 }

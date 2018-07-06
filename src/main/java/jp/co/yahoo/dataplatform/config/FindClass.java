@@ -15,40 +15,42 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package jp.co.yahoo.dataplatform.config;
 
 import java.io.IOException;
 
-public final class FindClass{
+public final class FindClass {
 
-  private FindClass(){}
+  private FindClass() {}
 
-  public static Object getObject( final String targetClassName ) throws IOException{
-    try{
-      Class classObj = Class.forName( targetClassName );
+  public static Object getObject(final String targetClassName) throws IOException {
+    try {
+      Class classObj = Class.forName(targetClassName);
       Object obj = classObj.newInstance();
       return obj;
-    }catch( ClassNotFoundException e ){
-      throw new IOException( e );
-    }catch( InstantiationException e ){
-      throw new IOException( e );
-    }catch( IllegalAccessException e ){
-      throw new IOException( e );
+    } catch (ClassNotFoundException e) {
+      throw new IOException(e);
+    } catch (InstantiationException e) {
+      throw new IOException(e);
+    } catch (IllegalAccessException e) {
+      throw new IOException(e);
     }
   }
 
-  public static Object getObject( final String targetClassName , final boolean initialize , final ClassLoader classLoader ) throws IOException{
-    try{
-      Class classObj = Class.forName( targetClassName , initialize , classLoader );
+  public static Object getObject(
+      final String targetClassName, final boolean initialize, final ClassLoader classLoader)
+      throws IOException {
+    try {
+      Class classObj = Class.forName(targetClassName, initialize, classLoader);
       Object obj = classObj.newInstance();
       return obj;
-    }catch( ClassNotFoundException e ){
-      throw new IOException( e );
-    }catch( InstantiationException e ){
-      throw new IOException( e );
-    }catch( IllegalAccessException e ){
-      throw new IOException( e );
+    } catch (ClassNotFoundException e) {
+      throw new IOException(e);
+    } catch (InstantiationException e) {
+      throw new IOException(e);
+    } catch (IllegalAccessException e) {
+      throw new IOException(e);
     }
   }
-
 }

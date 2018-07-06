@@ -15,16 +15,16 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package jp.co.yahoo.dataplatform.config;
 
-import java.util.Map;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.Map;
 
-public interface IConfigReader{
+public interface IConfigReader {
 
-  void read( Map<String,String> settingContainer , String confFilePath ) throws IOException;
+  void read(Map<String, String> settingContainer, String confFilePath) throws IOException;
 
-  void read( Map<String,String> settingContainer , InputStream in ) throws IOException;
-
+  void read(Map<String, String> settingContainer, InputStream in) throws IOException;
 }
